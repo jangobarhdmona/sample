@@ -1,0 +1,124 @@
+
+:root {
+  --green-dark: #0f3d2e;
+  --green-main: #1f7a4d;
+  --green-light: #a8d5ba;
+  --accent-yellow: #f2c94c;
+  --white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  background-color: var(--green-dark);
+  line-height: 1.6;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(15, 61, 46, 0.9);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(15,61,46,0.7), rgba(15,61,46,0.7)),
+              url('../4.jpeg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background: var(--accent-yellow);
+  color: var(--green-dark);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.menu-grid, .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  background: var(--green-main);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.footer {
+  background: #0b2e22;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background: var(--green-dark);
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+a{text-decoration:none; color:var(--white);}
